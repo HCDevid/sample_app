@@ -27,6 +27,18 @@ describe "Help page" do
 
 end
 
+describe "Contact page" do
+	it "should have the content 'Contact Us'" do
+		visit '/static_pages/contact'
+		expect(page).to have_content('Contact Us')
+	end
+
+	it "should have the right title" do
+		visit '/static_pages/contact'
+		expect(page).to have_title("Contact Us")
+	end
+end	
+
 describe "About page" do
 	it "should have the content 'About Us'" do
 		visit '/static_pages/about'
@@ -37,5 +49,4 @@ describe "About page" do
 		visit '/static_pages/about'
 		expect(page).to have_title("About Us")
 	end
-
 end
