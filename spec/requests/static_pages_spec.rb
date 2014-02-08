@@ -15,6 +15,7 @@ describe "Home page" do
 	it "should not have a custom title 'Home'" do
 		visit '/static_pages/home'
 		expect(page).not_to have_title ("Home")
+	end
 end
 
 describe "Help page" do
