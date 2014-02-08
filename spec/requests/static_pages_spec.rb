@@ -9,8 +9,12 @@ describe "Home page" do
 
 	it "should have the right title" do
 		visit '/static_pages/home'
-		expect(page).to have_title("Home")
+		expect(page).to have_title("Sample App")
 	end
+
+	it "should not have a custom title 'Home'" do
+		visit '/static_pages/home'
+		expect(page).not_to have_title ("Home")
 end
 
 describe "Help page" do
